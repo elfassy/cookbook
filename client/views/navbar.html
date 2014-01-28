@@ -1,0 +1,21 @@
+<template name="navbar">
+  <nav class="navbar navbar-default">
+    {{#if currentUserId}}
+
+    <ul class="nav navbar-nav">
+      <li class="{{active 'recipes'}}">
+        <a href="{{pathFor 'recipes'}}">My Recipes</a>
+      </li>
+      <li class="{{active 'friends'}}">
+        <a href="{{pathFor 'friends'}}">My Friends</a>
+      </li>
+      <li class="{{active 'friends_recipes'}}">
+        <a href="{{pathFor 'friends_recipes'}}">My Friends' Recipes</a>
+      </li>
+    </ul>
+    {{/if}}
+    <ul class="nav navbar-nav navbar-right" style="margin-right: 0px">
+        {{loginButtons}}
+    </ul>
+  </nav>
+</template>

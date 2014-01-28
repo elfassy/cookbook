@@ -1,0 +1,16 @@
+<!-- Friends -->
+<template name="friends">
+  <h2>Choose your friends:</h2>
+  <ul style="margin:10px 0;">
+  {{#each other_users}}
+    <li id="friends" style="list-style:none;margin-bottom:10px;">
+      {{#if myFriend}}
+        <a href="#" class="btn btn-large btn-success">{{username}}</a>
+      {{else}}
+        <a href="#" class="btn btn-info">{{username}}</a>
+      {{/if}}
+    </li>
+  {{/each}}
+  </ul>
+</template>
+

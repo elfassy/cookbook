@@ -1,0 +1,11 @@
+
+<!-- Ingredient -->
+<template name="ingredient">
+  <li>
+    {{nice_quantity}} of {{name}} 
+
+    {{#if myRecipe}}
+      &nbsp; <a class="del" href="#">&times;</a>
+    {{/if}}
+  </li>
+</template>

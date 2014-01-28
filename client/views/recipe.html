@@ -1,0 +1,32 @@
+
+<!-- Recipe -->
+<template name="recipe">
+  <div class="well">
+    <h2>
+      {{name}} 
+      {{#if myRecipe}}
+        <a class="del" href="#">&times;</a>
+      {{else}}
+        <span style="font-size:14px;">according to <em style="color:#188181">{{creator_name}}</em></span>
+      {{/if}}
+    </h2>
+    <p>Cook time: {{cooking_time}}</p>
+    <p>{{spicy}}</p>
+    <h4>Ingredients:</h4>
+    {{#if ingredients}}
+      <ul>
+      {{#each ingredients}}
+        {{> ingredient}}
+      {{/each}}
+      </ul>
+    {{else}}
+      <p>None.</p>
+    {{/if}}
+
+    {{#if myRecipe}}
+    <input class="ingredient-quantity" size="4" type="number" style="width:50px;" />
+    <input class="ingredient-name" type="text" />
+    <input class="ingredient-save" type="submit" />
+    {{/if}}
+  </div>
+</template>

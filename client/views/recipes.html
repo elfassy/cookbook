@@ -1,0 +1,20 @@
+<!-- Recipes -->
+<template name="recipes">
+  <h1>My Recipes</h1>
+  {{#each my_recipes}}
+    {{> recipe}}
+  {{/each}}
+
+  <div>
+    <hr/>
+    <strong>Create a recipe!</strong>
+    <div class="control-group" id="recipe-form">
+      <label class="control-label" for="recipe-name">Recipe name</label>
+      <div class="controls">
+        <input id="recipe-name" type="text" />
+        <input id="recipe-save" type="submit" />
+        <span class="help-inline"></span>
+      </div>
+    </div>
+  </div>
+</template>
